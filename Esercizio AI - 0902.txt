@@ -1,0 +1,25 @@
+- NPC Contadino: Raccogliere semi, piantare, depositare.
+	- Raccogliere semi> punto di raccolta oppure zona con attori in cui il contadino deve prendere tramite feedback i semi da usare -> Rosso
+	- Se il contadino ha dei semi, devi andare nel punto in cui si piantano. 
+	- Attore di tipo pianta> una volta spawnato (piantato) avra' un semplice timer. A fine timer si potra' raccogliere. -> Non raccoglibile: Marrone Raccoglibile: Verde
+	- Se ci sono degli actor da poter raccogliere, allora il contadino andra' a prenderli e portarli in un deposito piante
+	- Se no continua a piantare.
+
+Utilizzare gli EQS per trovare gli attori
+
+STATI CONTADINO:
+	- Raccogliere Semi->   	Rosso
+	- Piantare Semi->      	Viola
+	- Raccogliere piante-> 	Blu
+	- Depositare piante->	Giallo
+
+- NPC Torretta:  Allerta, Attivo, disattivato.
+	- Allerta: non ha nemici in vista
+	- Attivo ha nemici in vista quindi spara
+	- Disattivato non deve fare niente
+Dare feedback visivi con i colori
+
+- NPC Scortare:  Fermo, Ci segue a noi a una certa distanza, Se raggiungiamo una certa area poi si ferma.
+	- Segui> in cui seguira constantemente il nostro giocatore -> Verde
+	- Ci sono nemici: e cerchera' un riparo. Creiamo un attore che rappresenti un riparo e che dovra' il nostro npc cercare e raggiungere. (EQS) -> Viola
+	- Raggiunto luogo sicuro: non ci seguira' piu' e dovra' stare fermo in un punto all'interno dell'area safe. -> Giallo
